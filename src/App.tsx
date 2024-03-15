@@ -7,6 +7,7 @@ import { TextComponent } from './components/TextComponent';
 import CounterWithObjectState from './components/CounterWithObjectState';
 import { MyCustomInput } from './components/MyCustomInput';
 import { MiddleComponent } from './components/MiddleComponent';
+import ToDoList from './components/ToDoList';
 
 
 export default function App() {
@@ -14,8 +15,10 @@ export default function App() {
 
   const [value, setValue] = useState(10);
 
+
   return <>
     <div>App</div>
+    <ToDoList/>
     {/* <CounterWithObjectState /> */}
     {/* <TextComponent /> */}
     {/* <Counter /> */}
@@ -26,13 +29,13 @@ export default function App() {
         - se cambia la prop key, il componente viene REINIZIALIZZATO 
           (tutti gli stati tornano al valore iniziale) 
     */ }
-    <Counter initialValue={value} />
+    {/* <Counter initialValue={value} /> */}
     {/* <Counter key={value} /> */}
 
 
 
-    <button onClick={() => setValue(20)}>imposta a 20</button>
-    <div>value: {value}</div>
+    {/* <button onClick={() => setValue(20)}>imposta a 20</button> */}
+    {/* <div>value: {value}</div> */}
 
     {/* <MiddleComponent onChange={text => {
       // implementazione della callback
@@ -40,7 +43,7 @@ export default function App() {
       setText(text);
     }} /> */}
 
-    <div>Testo in App.tsx: {text}</div>
+    {/* <div>Testo in App.tsx: {text}</div> */}
 
     {/* <MyCustomInput label={"Cognome"} required={false} /> */}
   </>
